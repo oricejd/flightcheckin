@@ -38,6 +38,7 @@ public class CheckinController {
 		reservationUpadteRequest.setId(reservationId);
 		reservationUpadteRequest.setCheckedIn(true);
 		reservationUpadteRequest.setNumberOfBags(numberOfBags);
+		restClient.updateReservation(reservationUpadteRequest);
 		modelMap.addAttribute("msg","With reservation id: " + reservationId);
 		return "checkInConfirmation";
 	}

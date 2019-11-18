@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page isELIgnored="false"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +16,7 @@
 	Arrival City: ${reservation.flight.arrivalCity}<br/>
 	Date of Departure: ${reservation.flight.dateOfDeparture}<br/>
 	Estimated Departure Time: ${reservation.flight.estimatedDepartureTime}<br/>
+	Checked In: ${reservation.checkedIn}<br/>
 
 	<h2>Passenger Details</h2>
 	First Name: ${reservation.passenger.firstName}<br/>
@@ -26,7 +26,7 @@
 
 	<form action="completeCheckIn" method="post">
 		Enter number of checked-in bags: <input type="text" name="numberOfBags" /> 
-			<input type="hidden" name="reservationId" value="${reservation.id}" />
+		<input type="hidden" name="reservationId" value="${reservation.id}" />
 		<input type="submit" value="Check In" />
 	</form>
 
