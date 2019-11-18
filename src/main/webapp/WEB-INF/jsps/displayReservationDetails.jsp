@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h2>Flight Details:</h2>
-	Reservation #: ${reservation.id}<br/>
+	Reservation : #${reservation.id}<br/>
 	Airlines: ${reservation.flight.operatingAirlines}<br/>
 	Flight Number: ${reservation.flight.operatingAirlines}<br/>
 	Departure City: ${reservation.flight.departureCity}<br/>
